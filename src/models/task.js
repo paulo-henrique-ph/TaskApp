@@ -1,15 +1,15 @@
-const mongoose = require('mongoose')
+import { model } from 'mongoose';
 
-const Task = mongoose.model('Task', {
-    description: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    completed: {
-        type: Boolean,
-        default: false,
-    }
-})
+const Task = model('Task', {
+  description: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  completed: {
+    type: Boolean,
+    default: false,
+  },
+});
 
-module.exports = Task
+export default Task;
